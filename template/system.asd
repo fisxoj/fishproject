@@ -2,13 +2,13 @@
 ;;
 ;;;; (#| TMPL_VAR copyright |#)(#| /TMPL_IF |#)
 
-(asdf:defsystem (#| TMPL_VAR name |#)
+(defsystem (#| TMPL_VAR name |#)
   :description "Describe (#| TMPL_VAR name |#) here"
   :author "Matt Novenstern <fisxoj@gmail.com>"
   :license  "(#| TMPL_VAR license |#)"
   :version "0.0.1"(#| TMPL_IF depends-on |#)
   :depends-on (#| TMPL_VAR dependencies-string |#)(#| /TMPL_IF |#)
-  :pathname "src/"
+  :pathname "src"
   :components ((:file "(#| TMPL_VAR name |#)"))
   :homepage "https://fisxoj.github.io/(#| TMPL_VAR name |#)/"
   :in-order-to ((test-op (test-op (#| TMPL_VAR name |#)/test)))
