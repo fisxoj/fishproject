@@ -17,9 +17,9 @@
 
 (defsystem (#| TMPL_VAR name |#)/test
   :depends-on ("(#| TMPL_VAR name |#)"
-               "rove")
+               "parachute")
   :pathname "t"
   :components ((:file "(#| TMPL_VAR name |#)"))
   :perform (test-op (op c)
                     (declare (ignore op))
-                    (uiop:symbol-call :rove :run c)))
+                    (uiop:symbol-call :parachute :test c)))

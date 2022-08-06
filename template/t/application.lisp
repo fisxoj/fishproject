@@ -1,7 +1,8 @@
 (defpackage (#| TMPL_VAR name |#)/test
-  (:use :cl :rove))
+  (:use :cl :parachute))
 
 (in-package :(#| TMPL_VAR name |#)/test)
 
-(deftest test-(#| TMPL_VAR name |#)
-  (ok (eq 1 1) "testing works"))
+
+(define-test (#| TMPL_VAR name |#)
+    (true (eq 1 1) "testing works"))
